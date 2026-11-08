@@ -8,10 +8,10 @@ def cadastrar_produtos():
     while cadastro:
 
         while True:
-            marca = input("Digite a marca do produto: ").strip()
+            marca = input("\nDigite a marca do produto: ").strip()
 
             if not marca:
-                print("Marca invalida, digite uma marca valida!")
+                print("\nMarca invalida, digite uma marca valida!")
                 continue
             break
 
@@ -94,7 +94,7 @@ def cadastrar_clientes():
 
         while True:
 
-            nome = input("Digite o nome do cliente: ").strip()
+            nome = input("\nDigite o nome do cliente: ").strip()
             endereco = input("Digite o endereco do cliente: ").strip()
             cpf = input("Digite o CPF do cliente: ").strip()
 
@@ -105,11 +105,11 @@ def cadastrar_clientes():
                     break
 
             if not nome or not cpf or not endereco:
-                print("Dados invalidos. Por favor, preencha todos os campos.")
+                print("\nDados invalidos. Por favor, preencha todos os campos.")
                 continue
 
             if cpf_existente:
-                print("CPF ja cadastrado. Digite um CPF diferente.")
+                print("\nCPF ja cadastrado. Digite um CPF diferente.")
                 continue
 
             break
@@ -148,7 +148,7 @@ def vendas():
     c_encontrado = True
     while c_encontrado:
 
-        cpf_cliente = input("Digite o CPF do cliente: ").strip()
+        cpf_cliente = input("\nDigite o CPF do cliente: ").strip()
 
         cliente_encontrado = None
 
@@ -171,7 +171,7 @@ def vendas():
     p_encontrado = True
     while p_encontrado:
 
-        nome_produto = input("Digite o produto que deseja vender: ").strip().lower()
+        nome_produto = input("\nDigite o produto que deseja vender: ").strip().lower()
 
         produto_encontrado = None
 
@@ -198,7 +198,7 @@ def vendas():
     while v_quantidade:
 
         try:
-            quantidade = int(input("Digite a quantidade que deseja vender: "))
+            quantidade = int(input("\nDigite a quantidade que deseja vender: "))
         
             if quantidade <= 0:
                 print("Quantidade inválida. Digite um valor maior que zero.")
@@ -254,7 +254,7 @@ while menu:
     print("4 MOSTRAR COMPRAS")
     print("5 SAIR")
     print("--------------------------")
-    decisao = input("QUAL OPCAO DESEJA? ")
+    decisao = input("\nQUAL OPCAO DESEJA? ")
 
     if decisao == "1":
         
@@ -262,7 +262,7 @@ while menu:
         print("2 INCLUIR ESTOQUE")
         print("3 MOSTRAR PRODUTOS")
         print("4 VOLTAR AO MENU")
-        decisao1 = input("O QUE DESEJA FAZER? ")
+        decisao1 = input("\nO QUE DESEJA FAZER? ")
 
         if decisao1 == "1":
             cadastrar_produtos()
